@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Quiz</title>
+</head>
+
+<body>
+  <main class="container container1 flex-column text-center d-flex justify-content-center align-items-center">
+    <div id="loader">Loading....</div>
+
+    <!-- START THE QUIZ WINDOW -->
+    <div id="start-quiz">
+      <div class="row" id="home">
+        <div class="col-md-12">
+          <h1 class="fw-bolder text-uppercase animate__animated animate__fadeInTopLeft">
+            <span class="c1">welcome</span> <span class="c2">to</span>
+            <span class="c3">brainster's</span>
+            <span class="c4">trivia</span>
+          </h1>
+          <h4 class="c5 fw-bolder animate__animated animate__rotateInDownLeft">
+            Click on start button to begin
+          </h4>
+          <button id="start" class="btn btn-warning c2 fw-bolder animate__animated animate__jello"
+            onclick="startQuiz()">
+            Start
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- QUESTION WINDOW -->
+    <div id="question-window">
+      <h1 class="c2 fw-bolder animate__animated animate__pulse">Good luck</h1>
+      <h5 class="fw-bolder c7 animate__animated animate__pulse">Click on the button to start over</h5>
+      <button class="btn btn-warning c2 fw-bolder mb-5 px-2" onclick="startQuizOver()">
+        Start over
+      </button>
+
+      <div id="question-and-answers" class="c3 fw-bolder animate__animated animate__pulse"></div>
+      <div id="completed" class="h3 mt-3 c1">Completed 0/20</div>
+    </div>
+
+    <!-- QUIZ FINISHED -->
+    <div id="quiz-finished">
+      <button id="start" class="btn btn-warning c2 fw-bolder" onclick="startQuizOver()">
+        Start again
+      </button>
+
+      <h1 id="correct-answers" class="c1 fw-bolder"></h1>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+    crossorigin="anonymous"></script>
+  <script src="./main.js"></script>
+</body>
+
+</html>
